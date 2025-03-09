@@ -1,0 +1,87 @@
+/* Style de l'en-tête avec image de fond */
+.page-header {
+    position: relative; /* Permet de positionner les éléments enfants en absolu */
+    height: 400px; /* Définit une hauteur de 400px pour l'en-tête */
+    display: flex; /* Utilisation de Flexbox pour aligner les éléments */
+    align-items: center; /* Centre le contenu verticalement */
+    justify-content: center; /* Centre le contenu horizontalement */
+    color: white; /* Texte en blanc */
+    text-align: center; /* Centrage du texte */
+    background: url('/assets/img/inst2.png') no-repeat center/cover; /* Image de fond centrée et couverte */
+}
+
+/* Superposition sombre pour améliorer la lisibilité du texte */
+.page-header-bg {
+    position: absolute; /* Se place par-dessus l'image de fond */
+    top: 0; /* Commence depuis le haut */
+    left: 0; /* Commence depuis la gauche */
+    width: 100%; /* Couvre toute la largeur */
+    height: 100%; /* Couvre toute la hauteur */
+    background: rgba(0, 0, 0, 0.5); /* Ajoute un effet sombre (50% d'opacité) */
+}
+
+/* Contenu textuel de l'en-tête */
+.page-header__inner {
+    position: relative; /* Assure que le texte reste au-dessus de l'overlay */
+    z-index: 2; /* Met le texte au premier plan */
+}
+
+/* Style de la navigation (breadcrumb) */
+.thm-breadcrumb {
+    padding: 0; /* Supprime les marges internes */
+    list-style: none; /* Supprime les puces de la liste */
+    display: flex; /* Affichage en ligne */
+    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 10px; /* Espacement entre les éléments */
+}
+
+/* Style des liens du fil d'Ariane */
+.thm-breadcrumb a {
+    color: white; /* Texte en blanc */
+    text-decoration: none; /* Supprime le soulignement des liens */
+}
+/* Style du conteneur de l'élément de navigation */
+.nav-item {
+    background: #ffffff; /* Fond blanc */
+    padding: 20px; /* Ajoute un espacement intérieur */
+    border-radius: 8px; /* Bords arrondis */
+    margin-bottom: 20px; /* Espacement en bas */
+        text-align: center; /* Centers inline elements */
+}
+
+/* Style du titre "À propos" */
+.nav-item h3 {
+    font-size: 24px; /* Taille du texte */
+    font-weight: bold; /* Gras */
+    color: #2c3e50; /* Couleur sombre bleutée */
+    text-align: left; /* Alignement à gauche */
+    border-bottom: 3px solid #4a4a4a; /* Ligne de séparation en bas */
+    padding-bottom: 5px; /* Espacement entre le texte et la ligne */
+    margin-bottom: 15px; /* Espacement en bas */
+}
+
+/* Style du paragraphe */
+.nav-item p {
+    font-size: 16px; /* Taille du texte */
+    color: #333; /* Couleur foncée */
+    line-height: 1.6; /* Espacement entre les lignes */
+    text-align: justify; /* Justification du texte */
+}
+
+/* Style de l'image */
+.nav-item img {
+    width: 50%; /* Image responsive */
+    border-radius: 8px; /* Bords arrondis */
+    margin-top: 15px; /* Espacement au-dessus de l’image */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .nav-item h3 {
+        font-size: 20px; /* Taille réduite sur petits écrans */
+    }
+
+    .nav-item p {
+        font-size: 14px; /* Texte plus petit pour la lisibilité */
+    }
+}

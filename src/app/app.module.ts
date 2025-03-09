@@ -9,6 +9,8 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -22,8 +24,9 @@ import { HomeModule } from './home/home.module';
     AppRoutingModule,
     FormsModule,
     CommonModule,
-    CoreModule,
-    HomeModule
+    HomeModule,
+    NgxPaginationModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

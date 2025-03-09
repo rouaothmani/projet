@@ -6,8 +6,14 @@ import { FormationComponent } from './formation/formation.component';
 import { ActivitesComponent } from './activites/activites.component';
 import { ContactComponent } from './contact/contact.component';
 import { ConnecterComponent } from './connecter/connecter.component';
+import { ConseilComponent } from './conseil/conseil.component';
+import { DepComponent } from './dep/dep.component';
+import { TicComponent } from './tic/tic.component';
+import { SiComponent } from './si/si.component';
+import { ClubComponent } from './club/club.component';
 
 const routes: Routes = [
+  
   {
     path:'actualites',
     component: ActualitesComponent
@@ -31,6 +37,26 @@ const routes: Routes = [
   {
     path:'connecter',
     component:ConnecterComponent 
+  },
+  {
+    path:'conseil',
+    component:ConseilComponent 
+  },
+  {
+    path:'dep',
+    component:DepComponent 
+  },
+  {
+    path:'tic',
+    component:TicComponent 
+  },
+  {
+    path:'si',
+    component:SiComponent 
+  },
+  {
+    path:'club',
+    component:ClubComponent 
   },
 ];
 

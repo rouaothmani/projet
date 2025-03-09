@@ -12,8 +12,7 @@ const routes: Routes = [
     path:'core',
    loadChildren: () => import('../app/core/core.module').then(m => m.CoreModule)
 
- },
-
+ }
 ];
 
 @NgModule({

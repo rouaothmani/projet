@@ -9,6 +9,11 @@ import { ActivitesComponent } from './activites/activites.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { ConnecterComponent } from './connecter/connecter.component';
+import { ConseilComponent } from './conseil/conseil.component';
+import { DepComponent } from './dep/dep.component';
+import { TicComponent } from './tic/tic.component';
+import { SiComponent } from './si/si.component';
+import { ClubComponent } from './club/club.component';
 
 
 @NgModule({
@@ -18,7 +23,12 @@ import { ConnecterComponent } from './connecter/connecter.component';
     FormationComponent,
     ActivitesComponent,
     ContactComponent,
-    ConnecterComponent
+    ConnecterComponent,
+    ConseilComponent,
+    DepComponent,
+    TicComponent,
+    SiComponent,
+    ClubComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +41,12 @@ import { ConnecterComponent } from './connecter/connecter.component';
     ActivitesComponent,
     FormationComponent,
     ContactComponent,
-    ConnecterComponent
+    ConnecterComponent,
+    ConseilComponent,
+    DepComponent,
+    TicComponent,
+    SiComponent,
+    ClubComponent
   ]
 })
 export class CoreModule { }

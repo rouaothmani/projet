@@ -52,7 +52,7 @@
 
 /* Style du conteneur principal */
 .containerPage {
-    background: #ffffff; /* Fond blanc pour un design épuré */
+    background: rgb(232, 231, 231);; /* Fond blanc pour un design épuré */
     padding: 20px; /* Ajoute un espace autour du contenu pour éviter qu'il touche les bords */
 }
 
@@ -99,7 +99,7 @@ ul.tick li {
 
 /* Ajoute une icône "✔" verte avant chaque élément de la liste */
 ul.tick li::before {
-    content: '✔'; /* Symbole de validation */
+    content: '•'; /* Symbole de validation */
     position: absolute; /* Position absolue pour aligner l'icône correctement */
     left: 0; /* Positionne l'icône à gauche */
     top: 0; /* L'aligne verticalement avec le texte */
@@ -130,3 +130,41 @@ ul.tick li strong {
     }
 }
 
+header, footer {
+    background-color: #005870;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+.container {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.contact-info, .contact-form {
+    margin-bottom: 30px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: rgba(28, 160, 222, 0.15);
+}
+.contact-form button {
+    background-color: #005870;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.map {
+    margin-top: 30px;
+}

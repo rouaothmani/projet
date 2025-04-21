@@ -52,7 +52,7 @@
 
 /* Style du conteneur principal */
 .containerPage {
-    background: #ffffff; /* Fond blanc pour un design épuré */
+    background: rgb(232, 231, 231);; /* Fond blanc pour un design épuré */
     padding: 20px; /* Ajoute un espace autour du contenu pour éviter qu'il touche les bords */
 }
 
@@ -99,7 +99,7 @@ ul.tick li {
 
 /* Ajoute une icône "✔" verte avant chaque élément de la liste */
 ul.tick li::before {
-    content: '✔'; /* Symbole de validation */
+    content: '•'; /* Symbole de validation */
     position: absolute; /* Position absolue pour aligner l'icône correctement */
     left: 0; /* Positionne l'icône à gauche */
     top: 0; /* L'aligne verticalement avec le texte */
@@ -128,4 +128,46 @@ ul.tick li strong {
     ul.tick li {
         font-size: 14px; /* Réduit la taille du texte pour une meilleure lisibilité */
     }
+}
+
+.embed-container {
+    height:0;
+    margin-bottom:18px;
+    overflow:hidden;
+    padding-bottom:56.25%; /* 16/9 ratio */
+    padding-top:30px; /* IE6 workaround*/
+    position:relative;
+  }
+  .embed-container iframe,
+  .embed-container object,
+  .embed-container embed {
+    height:100% !important;
+    left:0;
+    position:absolute;
+    top:0;
+    width:100% !important;
+  }
+  
+  nav {
+  border-bottom: 1px solid black;
+}
+
+.crumbs ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.crumb {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+
+.crumb a::after {
+  display: inline-block;
+  color: #000;
+  content: ">";
+  font-size: 80%;
+  font-weight: bold;
+  padding: 0 3px;
 }

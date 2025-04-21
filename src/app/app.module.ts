@@ -26,7 +26,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     CommonModule,
     HomeModule,
     NgxPaginationModule,
-    CarouselModule
+    CarouselModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

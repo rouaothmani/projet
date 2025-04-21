@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'client';
-}
+    sliderExpanded = false;
+  
+    expandSlider() {
+      this.sliderExpanded = true;
+      document.body.style.overflow = 'hidden';
+    }
+  
+    // Call this when slider is closed
+    onSliderClosed() {
+      this.sliderExpanded = false;
+      document.body.style.overflow = 'auto';
+    }
+  }

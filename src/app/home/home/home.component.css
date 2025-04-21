@@ -1,31 +1,13 @@
 /* Importation de la police Open Sans depuis Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
- /* Style de l'en-tête avec image de fond */
-.page-header {
-    position: relative; /* Permet de positionner les éléments enfants en absolu */
-    height: 400px; /* Définit une hauteur de 400px pour l'en-tête */
-    display: flex; /* Utilisation de Flexbox pour aligner les éléments */
-    align-items: center; /* Centre le contenu verticalement */
-    justify-content: center; /* Centre le contenu horizontalement */
-    color: white; /* Texte en blanc */
-    text-align: center; /* Centrage du texte */
-    background: url('/assets/img/2.png') no-repeat center/cover; /* Image de fond centrée et couverte */
-}
-
-/* Superposition sombre pour améliorer la lisibilité du texte */
-.page-header-bg {
-    position: absolute; /* Se place par-dessus l'image de fond */
-    top: 0; /* Commence depuis le haut */
-    left: 0; /* Commence depuis la gauche */
-    width: 100%; /* Couvre toute la largeur */
-    height: 100%; /* Couvre toute la hauteur */
-    background: rgba(0, 0, 0, 0.5); /* Ajoute un effet sombre (50% d'opacité) */
-}
-
-/* Contenu textuel de l'en-tête */
+ 
 .page-header__inner {
     position: relative; /* Assure que le texte reste au-dessus de l'overlay */
     z-index: 2; /* Met le texte au premier plan */
+}
+
+.page-header__inner .h1{
+    text-align: center; /* Aligne le texte au centre */
 }
 
 /* Style de la navigation (breadcrumb) */
@@ -137,41 +119,7 @@ ul.tick li strong {
     object-fit: cover;
 }
 /* Style du conteneur des cartes */
-.nav-item {
-    display: grid; /* Utilisation du modèle de grille */
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Les cartes s'adaptent à la taille de l'écran */
-    gap: 20px; /* Espacement entre les cartes */
-    width: 100%; /* Largeur du conteneur qui prend toute la largeur disponible */
-    max-width: 1200px; /* Largeur maximale du conteneur pour éviter qu'il soit trop large */
-    justify-content: center; /* Centre les cartes dans le conteneur */
-    
-}
-.nav-item a{
-    
-    background: rgba(0, 0, 0, 0.5); /* Ajoute un effet sombre (50% d'opacité) */
-}
-/* Style de chaque carte */
-.card {
-    background: #59c3df; /* Fond pour chaque carte */
-    padding: 60px; /* Espacement interne de la carte (plus de place pour le contenu) */
-    border-radius: 10px; /* Coins arrondis pour un effet plus doux */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre autour de la carte pour l'effet 3D */
-    text-align: center; /* Aligne le texte au centre */
-    text-decoration: none; /* Enlève le soulignement du lien */
-    color: white; /* Couleur du texte */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation lors du survol */
-    width: 100%; /* La carte prend toute la largeur disponible */
-    height: 150px; /* Hauteur de la carte, ajustée pour être plus grande */
-    display: flex; /* Utilisation de flexbox pour centrer le contenu à l'intérieur */
-    flex-direction: column; /* Organise le contenu de manière verticale */
-    justify-content: center; /* Centre verticalement le contenu */
-}
 
-/* Effet au survol de la carte */
-.card:hover {
-    transform: translateY(-5px); /* Légère élévation de la carte lors du survol */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ombre plus intense lors du survol */
-}
 
 .containerPage {
     background: #ffffff; /* Fond blanc pour un design épuré */
@@ -193,24 +141,292 @@ ul.tick li strong {
     margin-bottom: 15px; /* Ajoute un espace sous le paragraphe */
 }
 
-/* Style des sous-titres (ex: "Directeur", "Secrétaire Général") */
-.gl-title-left-blue-no-shadow {
-    font-size: 18px; /* Définit une taille légèrement plus grande pour attirer l'attention */
-    font-weight: bold; /* Rend le texte en gras */
-    color: #2c3e50; /* Utilise une teinte de bleu foncé pour rester sobre et professionnel */
-    margin-top: 20px; /* Ajoute un espace au-dessus pour bien séparer les sections */
-}
-@media (max-width: 768px) {
-    .PageTitle {
-        font-size: 24px; /* Réduit la taille du titre pour s'adapter aux écrans plus petits */
-    }
-    
-    .gl-title-left-blue-no-shadow {
-        font-size: 16px; /* Réduit légèrement la taille des sous-titres */
-    }
-    
-    ul.tick li {
-        font-size: 14px; /* Réduit la taille du texte pour une meilleure lisibilité */
-    }
+
+/* Style du conteneur des cartes */
+.nav-item {
+    display: grid;
+    /* Utilisation du modèle de grille */
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    /* Les cartes s'adaptent à la taille de l'écran */
+    gap: 20px;
+    /* Espacement entre les cartes */
+    width: 100%;
+    /* Largeur du conteneur qui prend toute la largeur disponible */
+    max-width: 1200px;
+    /* Largeur maximale du conteneur pour éviter qu'il soit trop large */
+    justify-content: center;
+    /* Centre les cartes dans le conteneur */
 }
 
+.nav-item a {
+    background: rgba(0, 0, 0, 0.5);
+    /* Ajoute un effet sombre (50% d'opacité) */
+    background-color: white;
+}
+
+/* Style de chaque carte */
+.card {
+    padding: 60px;
+    /* Espacement interne de la carte (plus de place pour le contenu) */
+    border-radius: 10px;
+    /* Coins arrondis pour un effet plus doux */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Ombre autour de la carte pour l'effet 3D */
+    text-align: center;
+    /* Aligne le texte au centre */
+    text-decoration: none;
+    /* Enlève le soulignement du lien */
+    color: #005870;
+    /* Couleur du texte */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Animation lors du survol */
+    width: 100%;
+    /* La carte prend toute la largeur disponible */
+    height: 150px;
+    /* Hauteur de la carte, ajustée pour être plus grande */
+    display: flex;
+    /* Utilisation de flexbox pour centrer le contenu à l'intérieur */
+    flex-direction: column;
+    /* Organise le contenu de manière verticale */
+    justify-content: center;
+    /* Centre verticalement le contenu */
+
+}
+
+/* Effet au survol de la carte */
+.card:hover {
+    transform: translateY(-5px);
+    /* Légère élévation de la carte lors du survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    /* Ombre plus intense lors du survol */
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.containerPage {
+    background: rgb(232, 231, 231);
+    /* Fond blanc pour un design épuré */
+    padding: 20px;
+    /* Ajoute un espace autour du contenu pour éviter qu'il touche les bords */
+}
+
+/* Style du titre principal de la page */
+.PageTitle {
+    font-size: 28px;
+    /* Définit la taille du texte */
+    font-weight: bold;
+    /* Rend le texte en gras */
+    color: #222;
+    /* Définit une couleur foncée pour le texte */
+    margin-bottom: 10px;
+    /* Ajoute un espace en bas pour séparer du reste du contenu */
+    border-bottom: 3px solid #4a4a4a;
+    /* Ajoute une ligne sous le titre pour le mettre en valeur */
+    padding-bottom: 5px;
+    /* Ajoute un espace entre le texte et la ligne */
+}
+
+/* Style des sous-titres (ex: "Directeur", "Secrétaire Général") */
+.gl-title-left-blue-no-shadow {
+    font-size: 18px;
+    /* Définit une taille légèrement plus grande pour attirer l'attention */
+    font-weight: bold;
+    /* Rend le texte en gras */
+    margin-top: 20px;
+    /* Ajoute un espace au-dessus pour bien séparer les sections */
+}
+
+.gl-title-left-blue-no-shadow a {
+    background-color: #222;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+.filters button {
+    background-color: #005870;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.filters button:hover {
+    background-color: #59c3df;
+}
+/* Conteneur principal des actualités */
+.actualites-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Style pour chaque actualité */
+.actualite {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+/* Style de la date */
+.date {
+    font-weight: bold;
+    color: #005870;
+}
+
+/* Style pour le lien "Plus de détails" */
+.details-link {
+    color: #005870;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.details-link:hover {
+    text-decoration: underline;
+}
+
+/* Titre */
+h1 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Styles pour le texte à l'intérieur des actualités */
+.contenu h2 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contenu p {
+    color: #666;
+}
+
+/* Compact state (default) */
+.slider-wrapper {
+    margin: 20px auto;
+    max-width: 5000px;
+    transition: all 0.3s ease;
+  }
+  
+  .slider-container {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  /* Expanded state */
+  .slider-wrapper.expanded {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .slider-wrapper.expanded .slider-container {
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .slide h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    padding: 0 20px;
+    text-align: center;
+    color: aliceblue;
+  }
+  
+  .slider-wrapper.expanded .slide h1 {
+    font-size: 3rem;
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+  }
+  
+  .slider-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .slider-nav button {
+    background: transparent;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  
+  .slider-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .slider-dots span.active {
+    background: #333;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+  

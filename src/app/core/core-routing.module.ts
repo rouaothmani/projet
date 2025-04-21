@@ -5,12 +5,21 @@ import { ProposComponent } from './propos/propos.component';
 import { FormationComponent } from './formation/formation.component';
 import { ActivitesComponent } from './activites/activites.component';
 import { ContactComponent } from './contact/contact.component';
-import { ConnecterComponent } from './connecter/connecter.component';
 import { ConseilComponent } from './conseil/conseil.component';
 import { DepComponent } from './dep/dep.component';
 import { TicComponent } from './tic/tic.component';
 import { SiComponent } from './si/si.component';
 import { ClubComponent } from './club/club.component';
+import { InscComponent } from './insc/insc.component';
+import { MdpComponent } from './mdp/mdp.component';
+import { For1Component } from './for1/for1.component';
+import { For2Component } from './for2/for2.component';
+import { For3Component } from './for3/for3.component';
+import { For4Component } from './for4/for4.component';
+import { ConnecterComponent } from './connecter/connecter.component';
+import { MpiiComponent } from './mpii/mpii.component';
+import { MpilcComponent } from './mpilc/mpilc.component';
+import { MreescComponent } from './mreesc/mreesc.component';
 
 const routes: Routes = [
   
@@ -35,10 +44,6 @@ const routes: Routes = [
     component:ContactComponent 
   },
   {
-    path:'connecter',
-    component:ConnecterComponent 
-  },
-  {
     path:'conseil',
     component:ConseilComponent 
   },
@@ -57,6 +62,41 @@ const routes: Routes = [
   {
     path:'club',
     component:ClubComponent 
+  },
+  {
+    path:'insc',
+    component:InscComponent 
+  },
+  {
+    path:'mdp',
+    component:MdpComponent 
+  },
+  {
+    path:'for1',
+    component:For1Component 
+  },{
+    path:'for2',
+    component:For2Component 
+  },{
+    path:'for3',
+    component:For3Component 
+  },{
+    path:'for4',
+    component:For4Component 
+  },
+  {
+    path:'connecter',
+    component:ConnecterComponent 
+  },
+  {
+    path:'mpii',
+    component:MpiiComponent 
+  }, {
+    path:'mpilc',
+    component:MpilcComponent 
+  }, {
+    path:'mreesc',
+    component:MreescComponent 
   },
 ];
 

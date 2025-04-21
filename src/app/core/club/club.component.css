@@ -52,7 +52,7 @@
 
 /* Style du conteneur principal */
 .containerPage {
-    background: #ffffff; /* Fond blanc pour un design épuré */
+    background: rgb(232, 231, 231);; /* Fond blanc pour un design épuré */
     padding: 20px; /* Ajoute un espace autour du contenu pour éviter qu'il touche les bords */
 }
 

@@ -52,7 +52,7 @@
 
 /* Style du conteneur principal */
 .containerPage {
-    background: #ffffff; /* Fond blanc pour un design épuré */
+    background: rgb(232, 231, 231);; /* Fond blanc pour un design épuré */
     padding: 20px; /* Ajoute un espace autour du contenu pour éviter qu'il touche les bords */
 }
 
@@ -99,7 +99,7 @@ ul.tick li {
 
 /* Ajoute une icône "✔" verte avant chaque élément de la liste */
 ul.tick li::before {
-    content: '✔'; /* Symbole de validation */
+    content: '•'; /* Symbole de validation */
     position: absolute; /* Position absolue pour aligner l'icône correctement */
     left: 0; /* Positionne l'icône à gauche */
     top: 0; /* L'aligne verticalement avec le texte */

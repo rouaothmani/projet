@@ -1,21 +1,18 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class InscService {
-  constructor(private http: HttpClient) {}
+  private Url = 'http://localhost:3000/insc';
 
-  checkCin(cin: string) {
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json'
+  constructor(private http: HttpClient) { }
+
+  checkCinExists(cinNumber: string): Observable<{ exists: boolean }> {
+    return this.http.get<{ exists: boolean }>(`${this.Url}/exists`, {
+      params: { number: cinNumber }
     });
-    
-    return this.http.post<any>(
-      'http://localhost/agil/insc.php',
-      JSON.stringify({ cin: cin }),
-      { headers: headers }
-    );
   }
 }

@@ -11,6 +11,7 @@ import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,9 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     HomeModule,
     NgxPaginationModule,
     CarouselModule,
-    CoreModule
+    CoreModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

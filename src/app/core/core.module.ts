@@ -19,12 +19,10 @@ import { For1Component } from './for1/for1.component';
 import { For2Component } from './for2/for2.component';
 import { For3Component } from './for3/for3.component';
 import { For4Component } from './for4/for4.component';
-import { ConnecterComponent } from './connecter/connecter.component';
 import { MpiiComponent } from './mpii/mpii.component';
 import { MpilcComponent } from './mpilc/mpilc.component';
 import { MreescComponent } from './mreesc/mreesc.component';
 import { Insc2Component } from './insc2/insc2.component';
-import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -45,7 +43,6 @@ import { HttpClientModule } from '@angular/common/http';
     For2Component,
     For3Component,
     For4Component,
-    ConnecterComponent,
     MpiiComponent,
     MpilcComponent,
     MreescComponent,
@@ -54,9 +51,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,
     CoreRoutingModule,
-    BrowserModule,
-    FormsModule, 
-    HttpClientModule
+    FormsModule,
+    HttpClientModule,
   ],
   exports:[
     ProposComponent,
@@ -75,7 +71,6 @@ import { HttpClientModule } from '@angular/common/http';
     For2Component,
     For3Component,
     For4Component,
-    ConnecterComponent,
     MpiiComponent,
     MpilcComponent,
     MreescComponent,

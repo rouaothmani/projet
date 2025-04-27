@@ -7,32 +7,34 @@ import { InscService } from './insc.service';
   styleUrls: ['./insc.component.css']
 })
 export class InscComponent {
-  cin = '';
-
-  constructor(private inscService: InscService) {}
-
-  check() {
-    if (!this.cin) {
-      alert("Please enter a CIN number");
-      return;
-    }
-
-    this.inscService.checkCin(this.cin).subscribe(
-      (res) => {
-        if (res.success) {
-          if (res.exists) {
-            alert("✅ CIN exists in the database.");
+    cinNumber = '';
+    message = '';
+  
+    constructor(private inscService: InscService) {}
+  
+    checkCin() {
+      this.inscService.checkCinExists(this.cinNumber).subscribe({
+        next: (response) => {
+          if (response.exists) {
+            alert('Contacter l\'administrateur');
           } else {
-            alert("❌ CIN does not exist.");
+            alert('ERREUR');
           }
-        } else {
-          alert("⚠️ Error: " + (res.error || 'Unknown error'));
+        },
+        error: () => {
+          alert('Erreur lors de la vérification du CIN');
         }
-      },
-      (err) => {
-        alert("⚠️ Server error. Please try again later.");
-        console.error(err);
-      }
-    );
+      });
+  
+      this.inscService.checkCinExists(this.cinNumber).subscribe({
+        next: (response) => {
+          this.message = response.exists 
+            ? 'Ce CIN existe dans notre base de données' 
+            : 'Ce CIN n\'existe pas dans notre base de données';
+        },
+        error: () => {
+          this.message = 'Erreur lors de la vérification du CIN';
+        }
+      });
+    }
   }
-}

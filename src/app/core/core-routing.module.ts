@@ -16,7 +16,6 @@ import { For1Component } from './for1/for1.component';
 import { For2Component } from './for2/for2.component';
 import { For3Component } from './for3/for3.component';
 import { For4Component } from './for4/for4.component';
-import { ConnecterComponent } from './connecter/connecter.component';
 import { MpiiComponent } from './mpii/mpii.component';
 import { MpilcComponent } from './mpilc/mpilc.component';
 import { MreescComponent } from './mreesc/mreesc.component';
@@ -84,10 +83,7 @@ const routes: Routes = [
     path:'for4',
     component:For4Component 
   },
-  {
-    path:'connecter',
-    component:ConnecterComponent 
-  },
+  
   {
     path:'mpii',
     component:MpiiComponent 
